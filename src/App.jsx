@@ -8,9 +8,10 @@ import {
 } from 'react-router-dom'
 import Login from './pages/Auth/Login.jsx'
 import SignUp from './pages/Auth/SignUp.jsx'
-import Home from '.pages/dashboard/Home.jsx'
-import Expense from '.pages/dashboard/Expense.jsx'
-import Income from '.pages/dashboard/Income.jsx'
+import Home from './pages/dashboard/Home.jsx'
+import Income from './pages/dashboard/Income.jsx'
+import Expense from './pages/dashboard/Expense.jsx'
+
 
 const App = () => {
   return (
@@ -31,3 +32,15 @@ const App = () => {
 }
 
 export default App
+
+const Root = () => {
+  // check is local storage has tocken 
+  const isAuthonticated = !!localStorage.getItem("token");
+  // if has direct to dahsbord else to login 
+  return isAuthonticated ? (
+    <Navigate  to='/dashboard' />
+  ):
+   (
+    <Navigate to='/login' />
+   );
+}
