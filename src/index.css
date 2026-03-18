@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Permanent+Marker&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --font-family: ' cursive ' , "Permanent Marker";
+  --font-weight: 400;
+  --font-style: normal;
+  --breaking-point: 1920px;
+  --color-primary: #F2EAE0;
+  --color-secondary: #B4D3D9;
+  --color-accent: #BDA6CE;
+  --color-text:#171717;
+}
+
+@layer base {
+  html{
+    --font-family: var(--font-family);
+    --font-weight: var(--font-weight);
+    --font-style: var(--font-style);
+    --breaking-point: var(--breaking-point);
+    --color-primary: var(--color-primary);
+    --color-secondary: var(--color-secondary);
+    --color-accent: var(--color-accent);
+    --color-text: var(--color-test);
+  }
+
+  body {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    overflow: hidden;
+  }
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Permanent Marker", 'cursive';
+  font-weight: 400;
+  font-style: normal;
+}
