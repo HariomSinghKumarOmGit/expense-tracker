@@ -3,7 +3,7 @@ import React from 'react'
 const AuthLayout = () => {
   return (
     <div>
-      1
+      2
     </div>
   )
 }
