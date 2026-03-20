@@ -33,6 +33,8 @@ const App = () => {
 
 export default App
 
+
+// auto directe to login 
 const Root = () => {
   // check is local storage has tocken 
   const isAuthonticated = !!localStorage.getItem("token");
@@ -44,3 +46,5 @@ const Root = () => {
     <Navigate to='/login' />
    );
 }
+
+
