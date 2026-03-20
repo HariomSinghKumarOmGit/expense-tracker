@@ -3,7 +3,7 @@ import React from 'react'
 const AuthLayout = () => {
   return (
     <div>
-      11
+      hello world
     </div>
   )
 }
