@@ -3,7 +3,7 @@ import React from 'react'
 const AuthLayout = () => {
   return (
     <div>
-      bye bye baby
+      bye bye baby Awwwe
     </div>
   )
 }
