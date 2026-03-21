@@ -41,7 +41,7 @@ export default AuthLayout
 const StatsInfoCard = ( {icon, label, value, color}) => {
   return (
     <div className='z-10 flex  gap-6 bg-white p-4 shadow-md shadow-purple-500/15 drop-shadow-xl rounded-2xl border border-gray-200/5 '>
-      <div className={` w-12 h-12 flex   items-center justify-center text-2xl text-white ${color} rounded-full drop-shadow-xl `}>
+      <div className={` w-12 h-12 flex   items-center justify-center text-2xl text-purple-600 ${color} rounded-full drop-shadow-xl `}>
     {icon}
     </div>
     <div>

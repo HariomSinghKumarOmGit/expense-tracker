@@ -29,6 +29,13 @@ const Login = () => {
             placeholder="4ladle@working.com"
             type="text"
           />
+          <Input 
+            value={password}
+            onChange={({target})=>setPassword(target.value)}  
+            lable="Password"
+            placeholder="Min 8 characters"
+            type="text"
+          />
 
         </form>
 
