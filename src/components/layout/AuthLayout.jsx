@@ -1,6 +1,6 @@
 import React from 'react'
 import card2 from '../../assets/images/card2.png'
-import { LuTrendingUpDown } from 'react-icons/lu'
+import { LuTrendingUpDown } from 'react-icons/lu';
 
 const AuthLayout = ( { children } ) => {
   return ( 
@@ -13,12 +13,12 @@ const AuthLayout = ( { children } ) => {
           {children}
       </div>
 
-      <div className='hidden md:block w-[40vw] h-screen bg-auth-bg-img bg-violet-50 bg-no-repeat bg-cover bg-center overflow-hidden relative pd-8 '>
+      <div className='hidden md:block w-[40vw] h-screen bg-auth-bg-img bg-violet-50 bg-no-repeat bg-cover bg-center overflow-hidden relative p-8 '>
         <div className='w-48 h-48 bg-purple-500 rounded-2xl absolute -top-7 -left-7 ' />
         <div className='w-48 h-48  border-8 border-fuchsia-500 rounded-2xl absolute top-8 -right-8 ' />
         <div className='w-48 h-48 bg-violet-500 rounded-2xl absolute -bottom-7 -left-7 ' />
     
-        <div className='grid grid-cols-1 z-20 '>
+        <div className='grid grid-cols-1 relative z-20 '>
           <StatsInfoCard 
             icon={<LuTrendingUpDown />}
             label="Track your Income & Expenses"
@@ -28,7 +28,7 @@ const AuthLayout = ( { children } ) => {
         </div>
 
         <img 
-          className='w-64 lg:w-[90vw] absolute bottom-10 shadow-lg shadow-blue-400/15 '
+          className='w-64 lg:w-[90%] absolute bottom-10 shadow-lg shadow-blue-400/15 '
           src={card2}
         />
       </div>
@@ -40,8 +40,8 @@ export default AuthLayout
 
 const StatsInfoCard = ( {icon, label, value, color}) => {
   return (
-    <div className='z-10 flex gap-6 bg-white p-4 shadow-md shadow-purple-500/15 drop-shadow-xl rounded-2xl border border-gray-200/5 '>
-      <div className={` w-12 h-12 flex items-center justify-center text-2xl text-white ${color} rounded-full drop-shadow-xl `}>
+    <div className='z-10 flex  gap-6 bg-white p-4 shadow-md shadow-purple-500/15 drop-shadow-xl rounded-2xl border border-gray-200/5 '>
+      <div className={` w-12 h-12 flex   items-center justify-center text-2xl text-white ${color} rounded-full drop-shadow-xl `}>
     {icon}
     </div>
     <div>
