@@ -9,6 +9,7 @@ const Login = () => {
         <p className='text-xl text-gray-800 mt-2  '>Please enter your credentials to login</p>
       </div>
     </AuthLayout>
+    
   )
 }
 
