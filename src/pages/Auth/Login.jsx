@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import AuthLayout from '../../components/layout/AuthLayout'
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../../assets/Inputs/Input';
+import { validateEmail } from '../../utils/helper';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,7 +14,21 @@ const Login = () => {
 
 
   //hanle login form on submil 
-  const handleLogin = (e) => {}
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    if(!validateEmail(email)){
+      setError('Please enter a valid email address');
+      return;
+    }
+
+    if(!password){
+      setError('Please enter a valid password');
+      return;
+    }
+
+    setError('');
+  }
 
   return (
     <AuthLayout>
@@ -37,7 +52,7 @@ const Login = () => {
             type="password"
           />
 
-          {error && <p className='text-red text-2xl p-4 '>{error}</p> }
+          {error && <p className=' text-red-500 text-sm -mt-1 mb-2 '>{error}</p> }
 
           <button type='submit' className='mt-2 mb-2 w-full bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-500/50 transition-colors ' >
           Login 
@@ -47,6 +62,8 @@ const Login = () => {
             Dont have account?{"    "}
             <Link to="/signup" className='text-gray-950 hover:text-purple-500  underline decoration-purple-600 ' >Signup</Link>
           </p>
+
+
         </form>
 
 
