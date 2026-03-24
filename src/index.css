@@ -42,5 +42,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .input-box {
-  @apply mt-0 mb-4 flex items-center w-[100%] p-3 rounded-lg border border-purple-300 text-sm text-gray-950 drop-shadow-sm shadow-sm bg-purple-300/25 shadow-purple-300;
+  @apply mt-0 mb-4 flex items-center w-full p-3 rounded-lg border border-purple-300 text-sm text-gray-950 drop-shadow-sm shadow-sm bg-purple-300/25 shadow-purple-300;
 }

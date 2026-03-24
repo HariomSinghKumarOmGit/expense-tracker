@@ -13,9 +13,9 @@ const Input = ({value, onChange, lable, placeholder, type}) => {
 
 
   return (
-    <div> 
+    <div className="w-full"> 
       <label className='text-lg text-slate-800 ' >{lable} </label>
-      <div className="input-box">
+      <div className="input-box  ">
 
         <input
           type={type=='password' ? showPassword ? 'text' : 'password' : type }
