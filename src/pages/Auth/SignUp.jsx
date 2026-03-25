@@ -60,6 +60,16 @@ const Signup = () => {
 
             
           </div>
+          {error && <p className=' text-red-500 text-sm -mt-1 mb-2 '>{error}</p> }
+
+          <button type='submit' className='mt-2 mb-2 w-full bg-purple-500 text-white py-3 rounded-lg font-semibold hover:bg-purple-500/50 transition-colors ' >
+          Sign Up
+          </button>
+
+          <p>
+            Already have an account?{"    "}
+            <Link to="/login" className='text-gray-950 hover:text-purple-500  underline decoration-purple-600 ' >Login</Link>
+          </p>
         </form>
       </div>
       

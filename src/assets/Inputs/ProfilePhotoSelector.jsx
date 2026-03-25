@@ -8,7 +8,7 @@ const ProfilePhotoSelector = ({image, setImage}) => {
 
 
   const handleImageChange = (e) => {
-    const file = e.target.files(0);
+    const file = e.target.files[0];
     if (file) {
       setImage(file);
       
@@ -28,7 +28,43 @@ const ProfilePhotoSelector = ({image, setImage}) => {
   }
 
   return (
-<div>hello</div>
+<div className='flex justify-center mb-6'>
+  <input 
+  type="file"
+  accept='image/*'
+  ref={inputRef}
+  onChange={handleImageChange}
+  className='hidden'
+/>
+
+{!image ? (
+  <div className='w-20 h-20 flex items-center justify-center bg-purple-100 rounded-full relative'>
+    <LuUser className='text-4xl   text-purple-500' />
+    <button 
+    type='button'
+    onClick={onChooseFile}
+    className='w-8 h-8 flex items-center justify-center bg-purple-500 text-white rounded-full absolute -bottom-1 -right-1 '>
+      <LuUpload/>
+    </button>
+  </div>
+):(
+  <div className='relative'>
+    <img 
+    src={previewUrl} 
+    alt="profile-photo" 
+    className='w-20 h-20 object-cover rounded-full ' 
+    />
+    <button 
+    className='w-8 h-8 flex items-center justify-center bg-red-500 text-white rounded-full absolute -bottom-1 -right-1 '
+    type='Button'
+    onClick={handleRemoveImage}
+    >
+      <LuTrash/>
+    </button>
+  </div>
+)}
+
+</div>
   )
   
 }
