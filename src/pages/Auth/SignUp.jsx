@@ -3,6 +3,7 @@ import AuthLayout from '../../components/layout/AuthLayout'
 import { Link, useNavigate } from 'react-router-dom';
 import Input from '../../assets/Inputs/Input';
 import { validateEmail } from '../../utils/helper';
+import ProfilePhotoSelector from '../../assets/Inputs/ProfilePhotoSelector';
 
 const Signup = () => {
 
@@ -30,6 +31,8 @@ const Signup = () => {
         </p>
 
         <form onSubmit={handleSignUp}>
+          <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <Input 
               type="text"
